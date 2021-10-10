@@ -1,0 +1,148 @@
+/* 
+font-family: 'Gilda Display', serif;
+font-family: 'Maven Pro', sans-serif;
+farbe: #333, #fff, #3dc8d5, #8507e1, #ccc
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Maven+Pro:wght@400;500;600&display=swap');
+
+ /* General Styles */
+ * {
+  font-family: 'Maven Pro', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+ }
+
+ h2 {
+  font-family: 'Gilda Display', serif;
+ }
+
+ main section {
+  width:100%;
+  height:100vh;
+   }
+
+/* Header */
+ header {
+   background-color: #333;
+   color:#ccc;
+   width:100%;
+   height:100vh;
+ }
+
+ header h1 {
+   /* border:2px solid whitesmoke; */
+   font-size: 1.2em;
+   padding:0.5em;
+   margin: 0 0 0 3em;
+   width: 7%;
+   text-align: center;
+   line-height: 1.7em;
+ }
+
+ header div {
+   /* border:2px solid whitesmoke; */
+   background-image: linear-gradient(to top right,#8507e1, #3dc8d5);
+   width: 20em;
+   height: 18em;
+   text-align: center;
+   padding: 3em;
+   margin:0 auto;
+   margin-top: 10em;
+ }
+ header div h2{
+  font-size: 3.5em;
+  color:#fff;
+  margin-bottom: 0.5em;
+ }
+/* Header Gradient transition */ /*  Absolut geiler Scheiß! IT WORKS! */
+ .gradient {
+  position: relative;
+  z-index: 1; /* matters!*/
+  background: linear-gradient(
+    to top right,
+    #8507e1,
+    #3dc8d5
+  );
+}
+.gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20em;
+  height: 18em;
+  background: linear-gradient(
+    to top right,
+    #3dc8d5,
+    #8507e1
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+.gradient:hover::before {
+  opacity: 1;
+} 
+
+/* Header Nav-Liste */
+header ul {
+  text-align: right;
+  margin:5em 2em 10em 75em;
+  list-style-type:none;
+  font-size:1em;
+}
+header ul li {
+padding: 0.5em;
+}
+header ul a{
+  text-decoration: none;
+  color:#ccc;
+}
+header ul a:hover {
+  color:#fff;
+}
+
+/* Main Style */
+main section:first-of-type {
+  background-image: url("https://assets.website-files.com/5c8834f1555981170b2fd8b1/5c898cd67456ffcba141a5ff_PROJECTS.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  }
+main section:first-of-type h2 {
+  font-size: 3.7em;
+  font-weight:bold;
+  padding:1.4em 3em;
+  margin:0 0 1em 2.79em;
+}
+main section:first-of-type > p{
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.3em;
+  padding:0.5em 1em;
+  margin-left: 17em;
+  width:50%;
+}
+
+/* Section Projects*/
+.project {
+  text-align: center;
+  margin:0,auto;
+}
+.img {
+width: 78em;
+height: 38em;
+/* text-align: center;
+margin:0,auto; */
+border:2px solid hidden;
+border-radius: 0.5em;
+} 
+.project h2 {
+  text-align: left;
+  font-size: 3em;
+  padding:0.5em 1em 0.2em 2.1em;
+}
+.project p {
+  text-align: left;
+  padding-left: 6.5em;
+}
